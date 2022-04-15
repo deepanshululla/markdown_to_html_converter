@@ -23,6 +23,9 @@ looking for a small subset. This is the formatting we’d like you to implement:
 | `Unformatted text`                     | `<p>Unformatted text</p>`                         |
 | `[Link text](https://www.example.com)` | `<a href="https://www.example.com">Link text</a>` |
 | `Blank line`                           | `Ignored`                                         |
+| **...**  (bold)                        |  <strong>...</strong>                             |
+| *...*     (italic)                     |  <i>...</i>                                       |
+| ***...**     (bolditalic)              |  <strong><i>...</i></strong>                      |
 
 ### Demo
 
