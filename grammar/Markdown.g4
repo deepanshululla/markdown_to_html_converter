@@ -16,7 +16,6 @@ linked_text: ('['TEXT+']');
 link: (linked_text url);
 plaintext: TEXT|SPACE;
 para: (link | plaintext| NEWLINE)+;
-text    : (para|NEWLINE)+;
 heading : '#'+ (plaintext|link)*;
 italic  :   ('*'plaintext+'*');
 bold    :   ('**'plaintext+'**');
