@@ -50,5 +50,5 @@ Run integration tests
 make tests
 ```
 
-Here is an example template syntax [template_file](./test_files/test1/inp.md)
+Here is an example template syntax [input file](./tests/test_files/test1/inp.md)
 and the [generated output file](./out.html).
