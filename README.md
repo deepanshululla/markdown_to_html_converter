@@ -45,6 +45,10 @@ Alternative you can clone the repo and do
 make run
 ```
 
+Run integration tests
+```bash
+make tests
+```
 
 Here is an example template syntax [template_file](./test_files/test1/inp.md)
 and the [generated output file](./out.html).
