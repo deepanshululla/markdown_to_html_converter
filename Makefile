@@ -15,8 +15,8 @@ docker_build:
 run:
 	PYTHONPATH=.. python lang_bin.py
 
-tests:
-	pytest ./tests
+test:
+	PYTHONPATH=.. python -m pytest ./tests/test_integration.py
 
 install_dev:
 	PYTHONPATH=.. python -m pip install -r requirements.txt -r test_requirements.txt
