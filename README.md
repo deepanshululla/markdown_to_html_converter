@@ -25,24 +25,17 @@ looking for a small subset. This is the formatting we’d like you to implement:
 | `Blank line`                           | `Ignored`                                         |
 
 ### Demo
-```bash
 
-docker run deepanshululla/jinja_clone
-
-```
-
-To use this in your custom project, you need to have exactly
-one json(namespace params) and template file.
-
-```bash
-echo MY_DIR_LOCATION="my location for files"
-
-docker run  -v $MY_DIR_LOCATION:/data deepanshululla/jinja_clone --directory=/data
-
-```
-Alternative you can clone the repo and do
+After cloning the repo, use
 ```bash
 make run
+```
+This uses a default file.
+
+However we can specify our own file
+
+```bash
+PYTHONPATH=.. python lang_bin.py --file="./tests/test_files/test1/inp.md"
 ```
 
 Run integration tests
