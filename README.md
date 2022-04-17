@@ -25,6 +25,7 @@ looking for a small subset. This is the formatting we’d like you to implement:
 | `Blank line`                           | `Ignored`                                         |
 
 ### Demo
+The project requires setting up [antlr](https://www.antlr.org/) first.
 
 After cloning the repo, use
 ```bash
