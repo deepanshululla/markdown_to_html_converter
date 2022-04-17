@@ -25,9 +25,12 @@ looking for a small subset. This is the formatting we’d like you to implement:
 | `Blank line`                           | `Ignored`                                         |
 
 ### Demo
+
+There are 2 ways to run everything
+1) Using your own machine
 The project requires setting up [antlr](https://www.antlr.org/) first.
 
-After cloning the repo, use
+then After cloning the repo, use
 ```bash
 make run
 ```
@@ -43,6 +46,49 @@ Run integration tests
 ```bash
 make tests
 ```
+
+2) The second way is to use docker.
+
+```bash
+make docker_run
+```
+This uses a default file.
+
+Run integration tests
+```bash
+make docker_run_tests
+```
+
+## Test Coverage
+
+
+```bash
+
+(venv) ➜  markdown_to_html_converter git:(master) ✗ make test
+PYTHONPATH=.. python -m pytest --cov=./semantics
+=========================================================================== test session starts ============================================================================
+platform darwin -- Python 3.9.7, pytest-7.1.1, pluggy-1.0.0
+rootdir: /Users/deepanshululla/mycode/PycharmProjects/markdown_to_html_converter/markdown_to_html_converter
+plugins: ordering-0.6, cov-3.0.0
+collected 2 items
+
+tests/test_integration.py ..                                                                                                                                         [100%]
+
+---------- coverage: platform darwin, python 3.9.7-final-0 -----------
+Name                              Stmts   Miss  Cover
+-----------------------------------------------------
+semantics/__init__.py                 0      0   100%
+semantics/code_generator.py          12      2    83%
+semantics/markdown_converter.py      19      0   100%
+semantics/markdown_visitor.py        64      9    86%
+-----------------------------------------------------
+TOTAL                                95     11    88%
+
+
+============================================================================ 2 passed in 0.33s =============================================================================
+(
+```
+
 
 Here is an example template syntax [input file](./tests/test_files/test1/inp.md)
 and the [generated output file](./out.html).

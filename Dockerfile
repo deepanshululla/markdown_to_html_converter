@@ -12,8 +12,8 @@ WORKDIR /app/
 
 COPY requirements.txt /app/
 RUN pip install -r requirements.txt
-COPY test-requirements.txt /app
-RUN pip install -r test-requirements.txt
+COPY test_requirements.txt /app
+RUN pip install -r test_requirements.txt
 
 WORKDIR /app/markdown_to_html_converter/
 COPY . .

@@ -26,4 +26,7 @@ install_dev:
 	PYTHONPATH=.. python -m pip install -r requirements.txt -r test_requirements.txt
 
 docker_run: docker_build
-	docker container run ${IMG}
+	docker container run --rm ${IMG}
+
+docker_run_tests: docker_build
+	docker container run --rm ${IMG} `make test`
