@@ -16,7 +16,11 @@ run:
 	PYTHONPATH=.. python lang_bin.py
 
 test:
-	PYTHONPATH=.. python -m pytest ./tests/test_integration.py
+	PYTHONPATH=.. python -m pytest --cov=./semantics
+
+clean_pyc:
+	find . -name "*.pyc" -exec rm -f {} \;
+	find . -name "*.pytest_cache" -exec rm -rf {} \;
 
 install_dev:
 	PYTHONPATH=.. python -m pip install -r requirements.txt -r test_requirements.txt
