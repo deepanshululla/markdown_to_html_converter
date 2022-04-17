@@ -61,6 +61,10 @@ make docker_run_tests
 
 ## Test Coverage
 
+I created a small test framework to automatically do the integration testing. The only thing we need to do add more tests is to create a directory [here](./tests/test_files).
+Then create 2 files which is our input and name in `inp.md` and the expected out file which will be named as `out.html`.
+That's pretty much it to add new test cases.
+
 
 ```bash
 
